@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Sensors</title>
+  <!-- Tambahkan Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <style>
+    /* Gaya khusus untuk tabel */
+    table {
+      text-align: center;
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.9em;
+      font-family: sans-serif;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      border-bottom: 1px solid #dddddd;
+    }
+
+    /* Gaya untuk menghighlight baris kedua */
+    tbody tr:nth-child(1) {
+      border: 4px solid #2C3333;
+    }
+
+    thead tr {
+      background-color: #F1F1F6;
+      text-align: center;
+    }
+
+    /* Gaya untuk tulisan "Data Sensors" */
+    .title {
+      text-align: center;
+      padding-top: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Tampilan -->
+  <div class="container">
+    <h1 class="title">Data Sensors</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Temperature</th>
+          <th>Humidity</th>
+          <th>Condition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.reverse().slice(0, 1).forEach(sensor => { %>
+          <tr>
+            <td><%= sensor.Temp %></td>
+            <td><%= sensor.Hum %></td>
+            <td><%= sensor.kondisi %></td>
+          </tr>
+      <% }) %>
+      </tbody>
+    </table>
+  </div>
+  <!-- End Tampilan -->
+
+  <!-- Tambahkan Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script language="javascript">
+    setTimeout(function(){
+    window.location.reload();
+    }, 2500);
+  </script>
+</body>
+</html>
